@@ -4,7 +4,7 @@ function Adventure() {
 return (
     <div className="w-full min-h-screen px-4 md:px-5">
         <h2 className="font-bold text-md px-5">Ready for an adventure?</h2>
-        <h1 className="text-5xl md:text-7xl lg:text-[10rem] py-4 px-5 leading-none">
+        <h1 className="text-5xl md:text-7xl lg:text-[10rem] py-4 px-5 font-bold leading-none">
             Discover the
             <br /> desert activities
         </h1>

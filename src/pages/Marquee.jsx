@@ -73,7 +73,7 @@ function Marquee() {
         ref={containerRef}
         className="w-full h-screen flex flex-col items-center justify-center bg-[#181717] text-white overflow-hidden"
       >
-        <div className="absolute z-[99] ">
+        <div className="absolute z-[99] overflow-hidden ">
           <motion.img
             transition={{ duration: 0.5, ease: "linearInOut" }}
             style={{
@@ -82,7 +82,7 @@ function Marquee() {
             }}
             src="https://capsules.moyra.co/_vercel/image?url=%2Fimages%2Fcap3.png&w=2559&q=80"
             alt="Logo"
-            className="w-96 h-auto rounded-2xl object-cover transition-transform duration-300"
+            className="w-[40rem]  h-auto rounded-md object-cover transition-transform duration-300"
           />
         </div>
         <marquee behavior="" direction="">
@@ -98,163 +98,148 @@ function Marquee() {
         </marquee>
       </div>
 
-      <div>
+      <div >
 
-      <motion.div
-        ref={box1Ref}
-        className="box  p-2 flex flex-col h-screen sticky top-[15px]"
-        style={{
-          scale: box1Animation.scale,
-          x: box1Animation.x,
-          opacity: box1Animation.opacity,
-        }}
-        transition={{ duration: 0.9 }}
-      >
-        <div className="relative">
-          <img
-           
-            src='https://capsules.moyra.co/_vercel/image?url=%2Fimages%2Fcap3.png&w=2559&q=80'
-            className="rounded-4xl w-full h-[90%]"
-            alt=""
-          />
-          <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "linear" }}
-            className="absolute top-3 left-3 font-bold text-lg"
-          >
-            <h1 className="text-[6rem] text-white">Classic Capsules</h1>
-          </motion.div>
-          <div className="absolute bottom-24 w-full text-lg">
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={parentVarients}
-              className="flex justify-between items-center"
-            >
-              <motion.h1
-                variants={childVarients}
-                transition={{ duration: 0.5, ease: "linear" }}
-                className="text-3xl max-w-xl text-white ml-3 font-bold"
-              >
-                Closer to <br /> Nature—Closer <br /> to Yourself
-              </motion.h1>
-              <motion.h1
-                variants={childVarients}
-                transition={{ duration: 0.5, ease: "linear" }}
-                className="text-md text-white mr-3"
-              >
-               Classic Capsule® boasts refined aesthetics <br /> and a modern
-interior, creating an intimate retreat in a desert landscape
-              </motion.h1>
-            </motion.div>
-          </div>
-        </div>
-      </motion.div>
+      <div 
+        data-scroll
+        data-scroll-speed="-.1"
+      
+      className="p-3 flex flex-col h-screen">
+             <div className="relative w-full h-full">
+                 <img 
+                     src={Image} 
+                     className="rounded-4xl w-full h-full object-cover" 
+                     alt="Capsule" 
+                 />
+                 <motion.div
+                     initial={{ opacity: 0, y: -50 }}
+                     animate={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.5, ease: "linear" }}
+                     className="absolute top-3 left-3 font-bold text-lg"
+                 >
+                     <h1 className="text-4xl md:text-6xl lg:text-[8rem] text-white">Classic Capsules</h1>
+                 </motion.div>
+                 <div className="absolute bottom-10 md:bottom-11 w-full text-lg">
+                     <motion.div
+                         initial="hidden"
+                         animate="visible"
+                         variants={parentVarients}
+                         className="flex flex-col md:flex-row justify-between items-start md:items-center px-3"
+                     >
+                         <motion.h1 
+                             variants={childVarients}
+                             transition={{ duration: 0.5, ease: "linear" }}
+                             className="text-2xl md:text-3xl max-w-xl text-white font-bold mb-4 md:mb-0"
+                         >
+                             Closer to <br /> Nature—Closer <br /> to Yourself
+                         </motion.h1>
+                         <motion.h1 
+                             variants={childVarients}
+                             transition={{ duration: 0.5, ease: "linear" }}
+                             className="text-sm md:text-md text-white"
+                         >
+                            Classic Capsule® boasts refined aesthetics and <br /> a modern
+interior, creating an intimate retreat in a desert landscape.
+                         </motion.h1>
+                     </motion.div>
+                 </div>
+             </div>
+         </div>
 
-      <motion.div
-        ref={box2Ref}
-        className="box p-2 flex flex-col h-screen sticky top-[14px]"
-        style={{
-          scale: box2Animation.scale,
-          x: box2Animation.x,
-          opacity: box2Animation.opacity,
-        }}
-        transition={{ duration: 0.9 }}
-      >
-        <div className="relative">
-          <img
-           
-            src={Image}
-            className="rounded-4xl w-full h-[90%]"
-            alt=""
-          />
-          <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "linear" }}
-            className="absolute top-3 left-3 font-bold text-lg"
-          >
-            <h1 className="text-[6rem] text-white">Terrace Capsules</h1>
-          </motion.div>
-          <div className="absolute bottom-24 w-full text-lg">
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={parentVarients}
-              className="flex justify-between items-center"
-            >
-              <motion.h1
-                variants={childVarients}
-                transition={{ duration: 0.5, ease: "linear" }}
-                className="text-3xl max-w-xl text-white ml-3 font-bold"
-              >
-                Closer to <br /> Nature—Closer <br /> to Yourself
-              </motion.h1>
-              <motion.h1
-                variants={childVarients}
-                transition={{ duration: 0.5, ease: "linear" }}
-                className="text-md text-white mr-3"
-              >
-                The most prestige capsule with the biggest <br /> terrace
-and jacuzzi with an amazing view of Los Angeles.
-              </motion.h1>
-            </motion.div>
-          </div>
-        </div>
-      </motion.div>
+       <div
 
-      <motion.div
-        ref={box3Ref}
-        className="box p-2 flex flex-col h-screen sticky top-[14px]"
-        style={{
-          scale: box3Animation.scale,
-          x: box3Animation.x,
-          opacity: box3Animation.opacity,
-        }}
-        transition={{ duration: 0.9 }}
-      >
-        <div className="relative">
-          <img
-           
-            src={Image}
-            className="rounded-4xl w-full h-[90%]"
-            alt=""
-          />
-          <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "linear" }}
-            className="absolute top-3 left-3 font-bold text-lg"
-          >
-            <h1 className="text-[6rem] text-white">Dessert Capsules</h1>
-          </motion.div>
-          <div className="absolute bottom-24 w-full text-lg">
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={parentVarients}
-              className="flex justify-between items-center"
-            >
-              <motion.h1
-                variants={childVarients}
-                transition={{ duration: 0.5, ease: "linear" }}
-                className="text-3xl max-w-xl text-white ml-3 font-bold"
-              >
-                Closer to <br /> Nature—Closer <br /> to Yourself
-              </motion.h1>
-              <motion.h1
-                variants={childVarients}
-                transition={{ duration: 0.5, ease: "linear" }}
-                className="text-md text-white mr-3"
-              >
-               With its striking architecture and upscale <br /> amenities, Desert
-Capsule® offers an exclusive retreat in the heart of the desert.
-              </motion.h1>
-            </motion.div>
+       data-scroll
+        data-scroll-speed=".2"
+        data-scroll-section
+        
+       
+       className="p-3 flex flex-col h-screen">
+              <div className="relative w-full h-full">
+                  <img 
+                      src={Image} 
+                      className="rounded-4xl w-full h-full object-cover" 
+                      alt="Capsule" 
+                  />
+                  <motion.div
+                      initial={{ opacity: 0, y: -50 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, ease: "linear" }}
+                      className="absolute top-3 left-3 font-bold text-lg"
+                  >
+                      <h1 className="text-4xl md:text-6xl lg:text-[8rem] text-white">Dessert Capsules</h1>
+                  </motion.div>
+                  <div className="absolute bottom-10 md:bottom-11 w-full text-lg">
+                      <motion.div
+                          initial="hidden"
+                          animate="visible"
+                          variants={parentVarients}
+                          className="flex flex-col md:flex-row justify-between items-start md:items-center px-3"
+                      >
+                          <motion.h1 
+                              variants={childVarients}
+                              transition={{ duration: 0.5, ease: "linear" }}
+                              className="text-2xl md:text-3xl max-w-xl text-white font-bold mb-4 md:mb-0"
+                          >
+                              Closer to <br /> Nature—Closer <br /> to Yourself
+                          </motion.h1>
+                          <motion.h1 
+                              variants={childVarients}
+                              transition={{ duration: 0.5, ease: "linear" }}
+                              className="text-sm md:text-md text-white"
+                          >
+                              With its striking architecture and upscale <br /> amenities, Desert
+Capsule® offers an exclusive retreat in the heart of the desert
+                          </motion.h1>
+                      </motion.div>
+                  </div>
+              </div>
           </div>
-        </div>
-      </motion.div>
+
+       <div
+        data-scroll
+        data-scroll-speed=".1"
+        data-scroll-section
+       className="p-3 flex flex-col h-screen">
+              <div className="relative w-full h-full">
+                  <img 
+                      src={Image} 
+                      className="rounded-4xl w-full h-full object-cover" 
+                      alt="Capsule" 
+                  />
+                  <motion.div
+                      initial={{ opacity: 0, y: -50 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, ease: "linear" }}
+                      className="absolute top-3 left-3 font-bold text-lg"
+                  >
+                      <h1 className="text-4xl md:text-5xl lg:text-[7rem] text-white   ">Terrace Capsules</h1>
+                  </motion.div>
+                  <div className="absolute bottom-10 md:bottom-11 w-full text-lg">
+                      <motion.div
+                          initial="hidden"
+                          animate="visible"
+                          variants={parentVarients}
+                          className="flex flex-col md:flex-row justify-between items-start md:items-center px-3"
+                      >
+                          <motion.h1 
+                              variants={childVarients}
+                              transition={{ duration: 0.5, ease: "linear" }}
+                              className="text-2xl md:text-3xl max-w-xl text-white font-bold mb-4 md:mb-0"
+                          >
+                              Closer to <br /> Nature—Closer <br /> to Yourself
+                          </motion.h1>
+                          <motion.h1 
+                              variants={childVarients}
+                              transition={{ duration: 0.5, ease: "linear" }}
+                              className="text-sm md:text-md text-white"
+                          >
+                             The most prestige capsule with the biggest <br /> terrace
+and jacuzzi with an amazing view of Los Angeles
+                          </motion.h1>
+                      </motion.div>
+                  </div>
+              </div>
+          </div>
       </div>
     </>
   );

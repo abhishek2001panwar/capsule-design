@@ -21,12 +21,12 @@ return (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, ease: "linear" }}
-            className="text-4xl md:text-6xl lg:text-8xl xl:text-[10rem] py-2 md:py-4 leading-tight md:leading-none"
+            className="text-4xl md:text-6xl lg:text-8xl font-bold xl:text-[10rem] py-2 md:py-4 leading-tight md:leading-none"
         >
             Choose the <br className="md:block" /> one you like best
         </motion.h1>
 
-        <div className="flex flex-col md:flex-row md:items-center justify-between px-2 md:px-5 py-10 md:py-32 gap-8">
+        <div className="flex flex-col md:flex-row md:items-center justify-between px-2 md:px-5 py-10 md:py-24 gap-8">
             <div className="max-w-lg text-xl md:text-2xl lg:text-3xl font-medium">
                 You can choose one of three premium capsule houses in our offer. Each
                 of our capsules provides the highest quality and meets the standards
